@@ -1,10 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <style>
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: #000; text-decoration:none !important}	
+
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+    </style>
 
 <nav class="navbar navbar is-white" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="<%=request.getContextPath() %>/">
-      <img src="/data/green.jpg" width="112" height="28">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -18,7 +26,7 @@
     <div class="navbar-start">
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link is-arrowless">
          	 소통과 참여
         </a>
 
@@ -37,7 +45,7 @@
         </div>&nbsp;&nbsp;&nbsp;&nbsp;
         
               <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link is-arrowless">
           	열린행정
         </a>
 
@@ -56,7 +64,7 @@
         </div>&nbsp;&nbsp;&nbsp;&nbsp;
         
               <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link is-arrowless">
           	마포구 소개
         </a>
 
@@ -75,7 +83,7 @@
         </div>&nbsp;&nbsp;&nbsp;&nbsp;
         
               <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link is-arrowless">
           	분야별 정보
         </a>
 

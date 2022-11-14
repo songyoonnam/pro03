@@ -1,8 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <style>
+    a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
+    a:visited { color: #000; text-decoration:none !important}	
+
+    a:active { color: rgb(0, 0, 0); text-decoration:none !important}
+    </style>
+    
 <footer class="footer">
   <div class="content has-text-centered">
-    <p>       
+  
+    <p> 
+    <a class="navbar-item" href="<%=request.getContextPath() %>/">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+       
       <a href="https://jgthms.com">개인정보처리방침 |</a>
       <a href="http://opensource.org/licenses/mit-license.php">CCTV처리방침 |</a>
       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">저작권정책 |</a>
