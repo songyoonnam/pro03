@@ -54,7 +54,7 @@
 					<td><input type="password" name="pw2" id="pw2" placeholder="비밀번호  확인 입력" class="input" required /></td>
 				</tr>
 				<tr>
-					<th>회원이름</th>
+					<th>이름</th>
 					<td><input type="text" name="name" id="name" placeholder="이름 입력" class="input" required /></td>
 				</tr>
 				<tr>
@@ -89,9 +89,9 @@
 		$("#id").keyup(function(){
 			$("#idck").val("no");
 			if($(this).val()!=""){
-				$("#msg").html("<strong>아이디 입력중입니다.</strong>");
+				$("#msg").html("아이디 입력중입니다");
 			} else {
-				$("#msg").html("아직 아이디 중복 체크를 하지 않으셨습니다.");
+				$("#msg").html("아직 아이디 중복 체크를 하지 않으셨습니다");
 			}
 		});
 	});
@@ -99,7 +99,7 @@
 	<script>
 	function idCheck(){
 		if($("#id").val()==""){
-			alert("아이디를 입력하지 않으셨습니다.");
+			alert("아이디를 입력하지 않으셨습니다");
 			$("#id").focus();
 			return;
 		} 
