@@ -114,25 +114,25 @@
 				var idChk = result.result;	
 				if(idChk==false){	
 					$("#idck").val("no");
-					$("#msg").html("<strong>기존에 사용되고 있는 아이디 입니다. 다시 입력하시기 바랍니다.</strong>");
+					$("#msg").html("<strong>기존에 사용되고 있는 아이디 입니다 다시 입력하시기 바랍니다</strong>");
 					$("#id").focus();
 				} else if(idChk==true){	
 					$("#idck").val("yes");
-					$("#msg").html("<strong>사용가능한 아이디 입니다.</strong>");
+					$("#msg").html("<strong>사용가능한 아이디 입니다</strong>");
 				} else if(idck==""){
-					$("#msg").html("<strong>아이디가 확인되지 않았습니다. 다시 시도해주시기 바랍니다.</strong>");
+					$("#msg").html("<strong>아이디가 확인되지 않았습니다 다시 시도해주시기 바랍니다</strong>");
 				}
 			}
 		});
 	}
 	function joinCheck(f){
 		if(f.pw.value!=f.pw2.value){
-			alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+			alert("비밀번호와 비밀번호 확인이 서로 다릅니다");
 			f.pw.focus();
 			return false;
 		}
 		if(f.idck.value!="yes"){
-			alert("아이디 중복 체크를 하지 않으셨습니다.");
+			alert("아이디 중복 체크를 하지 않으셨습니다");
 			return false;
 		}
 	}
