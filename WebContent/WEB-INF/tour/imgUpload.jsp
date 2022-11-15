@@ -26,6 +26,20 @@
 			<td>
 			<input class="input is-success" type="text" placeholder="파일 업로드">
 			</td>
+		  <div class="file is-success">
+  			<label class="file-label">
+   			 <input class="file-input" type="file" name="resume">
+   			 <span class="file-cta">
+     		 <span class="file-icon">
+       		 <i class="fas fa-upload"></i>
+      		</span>
+     		 <span class="file-label">
+        	파일 선택…
+    	  </span>
+   		 </span>
+  		</label>
+		</div>
+		
 		</tr>
 	
 	</table>
