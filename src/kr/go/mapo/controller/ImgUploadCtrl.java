@@ -24,13 +24,15 @@ public class ImgUploadCtrl<picDTO> extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		int pos = Integer.parseInt(request.getParameter("pos"));
-		String tourno;
+		String tourno = "";
 		String file1 = "", fileName1="", file2="", fileName2="";
 		String pat = "./upload/";
 		String realPat = "D:\\nsy\\pro01\\pro03\\Webcontent\\upload";
 		String saveDir = "upload";
+		String saveFolder = "D:/nsy/pro01/pro03/src";
 		String encType = "UTF-8";
 		String realPath = "";
+		String uploadPath = "";
 		int maxSize = 10*1024*1024;
 		String pdata = request.getParameter("picname");
 		TourDAO dao = new TourDAO();
@@ -39,11 +41,15 @@ public class ImgUploadCtrl<picDTO> extends HttpServlet {
 		try {
 			ServletContext context = request.getServletContext();
 			realPath = context.getRealPath(saveDir);
+			uploadPath = request.getRealPath(saveDir);
+			
 			MultipartRequest multi = null;
 			multi = new MultipartRequest(request, realPath, maxSize, encType);
+			
+			pos = Integer.parseInt(multi.getParameter("pos"));
 			file1 = multi.getParameter("picname");
 			fileName1 = multi.getParameter("picname");
-			file2.getFilesystemName(file1);
+			//file2.getFilesystemName(file2);
 			fileName2 =multi.getFilesystemName(fileName2);
 			dto.setPicname(file2);
 			dto.setPos(pos);
@@ -57,10 +63,9 @@ public class ImgUploadCtrl<picDTO> extends HttpServlet {
 				System.out.println("업로드 실패");
 			}
 				
+			} catch (Exception e){
+				
 			}
 		}
 		
-		
 	}
-
-}

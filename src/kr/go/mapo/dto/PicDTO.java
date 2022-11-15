@@ -5,7 +5,7 @@ public class PicDTO {
 	private int no;
 	private String tourno;
 	private String picname;
-	private String pos;
+	private int pos;
 	public int getNo() {
 		return no;
 	}
@@ -24,11 +24,16 @@ public class PicDTO {
 	public void setPicname(String picname) {
 		this.picname = picname;
 	}
-	public String getPos() {
+	public int getPos() {
 		return pos;
 	}
-	public void setPos(String pos) {
+	public void setPos(int pos) {
 		this.pos = pos;
+	}
+	@Override
+	public String toString() {
+		return "PicDTO [no=" + no + ", tourno=" + tourno + ", picname="
+				+ picname + ", pos=" + pos + "]";
 	}
 	
 	

@@ -36,3 +36,7 @@ SELECT * FROM pic;
 SELECT * FROM tour;
 
 COMMIT;
+
+ALTER TABLE user RENAME column POINT TO point;
+SELECT * FROM user;
+

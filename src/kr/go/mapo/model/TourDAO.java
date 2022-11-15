@@ -20,7 +20,8 @@ public class TourDAO extends HttpServlet {
 
 	}
 
-	public void fileUpload(PicDTO dto) {
+	public int fileUpload(PicDTO dto) {
+		return 0;
 
 		
 	}

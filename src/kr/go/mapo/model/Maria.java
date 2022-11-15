@@ -22,7 +22,7 @@ public class Maria {
 	final static String USER_ID_CHECK = "select * form user where id=?";
 	
 	final static String LOAD_LAST_NO = "";
-	final static String FILE_UPLOAD = "insert into pic(tourno, picname, ";
+	final static String FILE_UPLOAD = "insert into pic(tourno, picname, )";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DRIVER);

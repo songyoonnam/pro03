@@ -34,13 +34,13 @@ public class Main extends HttpServlet {
 	}
 
 	private ServletResponse ServletResponse(HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return response;
 	}
 
 	private ServletRequest ServletRequest(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return request;
 	}
 
 }

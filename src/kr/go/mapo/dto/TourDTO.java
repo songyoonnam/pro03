@@ -44,7 +44,14 @@ public class TourDTO {
 	public void setComment2(String comment2) {
 		this.comment2 = comment2;
 	}
+	@Override
+	public String toString() {
+		return "TourDTO [no=" + no + ", tourno=" + tourno + ", cate=" + cate
+				+ ", place=" + place + ", comment1=" + comment1 + ", comment2="
+				+ comment2 + "]";
+	}
 
+	
 	
 	
 }

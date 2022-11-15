@@ -18,7 +18,7 @@
   <jsp:include page="/header.jsp" />
 	<section class="section">
 	    <div class="columns is-full">
-			<jsp:include page="../admin/sidebar.jsp" />
+			<jsp:include page="../../admin/sidebar.jsp" />
 			<div class="column is-10">
 		      <h1 class="title">회원 목록</h1>
 				<table class="table">

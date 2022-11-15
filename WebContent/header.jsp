@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path2" value="${pageContext.request.contextPath }" /> 
     
     <style>
     a:link { color: rgb(0, 0, 0); text-decoration:none !important}	
@@ -11,7 +13,7 @@
 <nav class="navbar navbar is-white" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="<%=request.getContextPath() %>/">
-      <img src="/WebContent/data/green.jpg" alt="마포 문화관광" width="112" height="28">
+      <img src="./WebContent/data/green.jpg" alt="마포 문화관광" width="112" height="28">
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -49,17 +51,37 @@
       </div>
     </div>
 
-    <div class="navbar-end" id="tnb">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-success is-outlined">
-          		  회원가입
-          </a>
-          <a class="button is-success is-outlined">
-           		 로그인
-          </a>
-        </div>
-      </div>
-    </div>
+
+
+
+	<div class="navbar-end" id="tnb">
+	  <div class="navbar-item">
+	  	<c:if test="${empty sid }">
+	 <div class="buttons">
+	   <a href="${path2 }/user/agree.jsp" class="button is-success is-outlined">
+	     	회원가입
+	   </a>
+	   <a href="${path2 }/user/login.jsp" class="button is-success is-outlined">
+	    	로그인
+	   </a>
+	 </div>
+	</c:if>
+	<c:if test="${not empty sid }">
+	 <div class="buttons">
+	   <a href="${path2 }/UserInfoCtrl.do" class="button is-success is-outlined">
+	     	회원정보
+	   </a>
+	   <a href="${path2 }/UserLogoutCtrl.do" class="button is-success is-outlined">
+	     	로그아웃
+	   </a>
+		<c:if test='${sid.equals("admin")}'>
+		   <a href="${path2 }/AdminCtrl.do" class="button is-success is-outlined">
+		   	  관리자
+		   </a>
+		 </c:if>
+	 </div>
+	</c:if>
+  </div>
+</div>
   </div>
 </nav>

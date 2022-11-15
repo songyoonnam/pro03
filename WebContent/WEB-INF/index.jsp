@@ -132,19 +132,6 @@
                 </div>
             </div>
             
-<h2><strong>마포 새소식</strong></h2>            
- <div class="tabs">
-  <ul>
-    <li class="is-active"><a>공지사항</a></li>
-    <li><a>고시공고</a></li>
-    <li><a>강좌안내</a></li>
-    <li><a>채용공고</a></li>
-  </ul>
-</div>
-            
-            
-  	
-	<h2>${user}님의 테스트 입니다.</h2>
 	<jsp:include page="${path1 }/footer.jsp" />
 </body>
 </html>

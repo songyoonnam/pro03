@@ -22,7 +22,7 @@
 <jsp:include page="/header.jsp" />
 	<section class="section">
 	    <div class="columns is-full">
-			<jsp:include page="../admin/sidebar.jsp" />
+			<jsp:include page="../../admin/sidebar.jsp" />
 			<div class="column is-10">
 				<h2 class="title">회원 정보 확인 및 수정</h2>
 				<form name="frm1" id="frm1" action="${path1 }/UserUpdateCtrl.do" method="post" onsubmit="return joinCheck(this)">
@@ -157,6 +157,6 @@
 			</div>
 		</div>	
 	</section>
-<%@ include file="../../footer.jsp" %>
+<%@ include file="/footer.jsp" %>
 </body>
 </html>

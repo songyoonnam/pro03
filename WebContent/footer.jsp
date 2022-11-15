@@ -12,10 +12,7 @@
   <div class="content has-text-centered">
   
     <p> 
-    <a class="navbar-item" href="<%=request.getContextPath() %>/">
-      <img src="/WebContent/data/green.jpg" alt="마포 문화관광" width="112" height="28">
-    </a>
-       
+
       <a href="https://jgthms.com">개인정보처리방침 |</a>
       <a href="http://opensource.org/licenses/mit-license.php">CCTV처리방침 |</a>
       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">저작권정책 |</a>

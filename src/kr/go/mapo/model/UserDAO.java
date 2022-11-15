@@ -45,14 +45,14 @@ public class UserDAO {
     int cnt = 0;
     try {
       this.con = Maria.getConnection();
-      this.pstmt = this.con.prepareStatement("insert into user(id, pw, name, birth, email, tel, addr) values (?,?,?,?,?,?,?)");
+      this.pstmt = this.con.prepareStatement("insert into user(id, pw, name, tel, email, addr, birth) values (?,?,?,?,?,?,?)");
       this.pstmt.setString(1, user.getId());
       this.pstmt.setString(2, user.getPw());
       this.pstmt.setString(3, user.getName());
-      this.pstmt.setString(4, user.getBirth());
+      this.pstmt.setString(4, user.getTel());
       this.pstmt.setString(5, user.getEmail());
-      this.pstmt.setString(6, user.getTel());
-      this.pstmt.setString(7, user.getAddr());
+      this.pstmt.setString(6, user.getAddr());
+      this.pstmt.setString(7, user.getBirth());
       cnt = this.pstmt.executeUpdate();
     } catch (ClassNotFoundException e) {
       System.out.println("");
@@ -73,7 +73,7 @@ public class UserDAO {
     String qpw = "";
     try {
       this.con = Maria.getConnection();
-      this.pstmt = this.con.prepareStatement("update user set visted=visted+1 where id=?");
+      this.pstmt = this.con.prepareStatement("update user set visited=visited+1 where id=?");
       this.pstmt.setString(1, id);
       this.pstmt.executeUpdate();
       this.pstmt.close();
@@ -116,14 +116,16 @@ public class UserDAO {
         dto.setId(this.rs.getString("id"));
         dto.setPw(AES256.decryptAES256(this.rs.getString("pw"), this.key));
         dto.setName(this.rs.getString("name"));
-        dto.setEmail(this.rs.getString("email"));
         dto.setTel(this.rs.getString("tel"));
-        dto.setGrade(this.rs.getString("grade"));
+        dto.setEmail(this.rs.getString("email"));
         dto.setAddr(this.rs.getString("addr"));
-        dto.setPoint(this.rs.getInt("point"));
-        dto.setVisted(this.rs.getInt("visted"));
         dto.setBirth(this.rs.getString("birth"));
         dto.setRegdate(this.rs.getString("regdate"));
+        dto.setPoint(this.rs.getInt("point"));
+        dto.setVisited(this.rs.getInt("visited"));
+        dto.setGrade(this.rs.getString("grade"));
+
+
       } 
     } catch (ClassNotFoundException e) {
       System.out.println("");
@@ -143,14 +145,16 @@ public class UserDAO {
     int cnt = 0;
     try {
       this.con = Maria.getConnection();
-      this.pstmt = this.con.prepareStatement("update user set pw=?, name=?, birth=?, email=?, tel=?, addr=? where id=?");
+      this.pstmt = this.con.prepareStatement("update user set pw=?, name=?, tel=?, email=?, addr=?, birth=? where id=?");
+
       this.pstmt.setString(1, user.getPw());
       this.pstmt.setString(2, user.getName());
-      this.pstmt.setString(3, user.getBirth());
+      this.pstmt.setString(3, user.getTel());
       this.pstmt.setString(4, user.getEmail());
-      this.pstmt.setString(5, user.getTel());
-      this.pstmt.setString(6, user.getAddr());
+      this.pstmt.setString(5, user.getAddr());
+      this.pstmt.setString(6, user.getBirth());
       this.pstmt.setString(7, user.getId());
+
       cnt = this.pstmt.executeUpdate();
     } catch (ClassNotFoundException e) {
       System.out.println("");
@@ -177,14 +181,15 @@ public class UserDAO {
         dto.setId(this.rs.getString("id"));
         dto.setPw(AES256.decryptAES256(this.rs.getString("pw"), this.key));
         dto.setName(this.rs.getString("name"));
-        dto.setEmail(this.rs.getString("email"));
         dto.setTel(this.rs.getString("tel"));
-        dto.setGrade(this.rs.getString("grade"));
+        dto.setEmail(this.rs.getString("email"));
         dto.setAddr(this.rs.getString("addr"));
-        dto.setPoint(this.rs.getInt("point"));
-        dto.setVisted(this.rs.getInt("visted"));
         dto.setBirth(this.rs.getString("birth"));
         dto.setRegdate(this.rs.getString("regdate"));
+        dto.setPoint(this.rs.getInt("point"));
+        dto.setVisited(this.rs.getInt("visited"));
+        dto.setGrade(this.rs.getString("grade"));
+
         System.out.println(dto.getId());
         userList.add(dto);
       } 

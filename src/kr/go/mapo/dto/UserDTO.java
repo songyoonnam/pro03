@@ -9,11 +9,11 @@ public class UserDTO {
   
   private String name;
   
-  private int pt;
+  private int point;
   
   private String grade;
   
-  private int visted;
+  private int visited;
   
   private String tel;
   
@@ -50,11 +50,11 @@ public class UserDTO {
   }
   
   public int getPt() {
-    return this.pt;
+    return this.point;
   }
   
-  public void setPoint(int pt) {
-    pt = pt;
+  public void setPoint(int point) {
+	  this.point = point;
   }
   
   public String getGrade() {
@@ -65,12 +65,12 @@ public class UserDTO {
     this.grade = grade;
   }
   
-  public int getVisted() {
-    return this.visted;
+  public int getVisited() {
+    return this.visited;
   }
   
-  public void setVisted(int visted) {
-    this.visted = visted;
+  public void setVisited(int visited) {
+    this.visited = visited;
   }
   
   public String getTel() {
