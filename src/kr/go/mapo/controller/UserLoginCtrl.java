@@ -24,14 +24,14 @@ public class UserLoginCtrl extends HttpServlet {
     int cnt = dao.userLogin(id, pw);
     HttpSession session = request.getSession();
     if (cnt == 1) {
-      msg = "";
+      msg = "로그인 성공";
       session.setAttribute("sid", id);
       response.sendRedirect(request.getContextPath());
     } else if (cnt == 9) {
-      msg = "";
+      msg = "아이디 또는 비밀번호가 틀립니다";
       response.sendRedirect("./user/login.jsp?msg=" + msg);
     } else {
-      msg = "";
+      msg = "존재하지 않는 아이디입니다";
       response.sendRedirect("./user/login.jsp?msg=" + msg);
     } 
   }
