@@ -32,9 +32,9 @@ public class UserDAO {
         cnt = 0;
       } 
     } catch (ClassNotFoundException e) {
-      System.out.println("");
+      System.out.println("드라이버 로딩 실패");
     } catch (Exception e) {
-      System.out.println("SQL ");
+      System.out.println("SQL 구문이 처리되지 못했거나 연산이 잘못되었습니다");
     } finally {
       Maria.close(this.rs, this.pstmt, this.con);
     } 
@@ -55,13 +55,13 @@ public class UserDAO {
       this.pstmt.setString(7, user.getBirth());
       cnt = this.pstmt.executeUpdate();
     } catch (ClassNotFoundException e) {
-      System.out.println("");
+      System.out.println("드라이버 로딩 실패");
       e.printStackTrace();
     } catch (SQLException e) {
-      System.out.println("SQL" );
+      System.out.println("SQL 구문이 처리되지 못했습니다" );
       e.printStackTrace();
     } catch (Exception e) {
-      System.out.println("");
+      System.out.println("잘못된 연산 및 요청으로 인해 목록을 불러오지 못했습니다");
     } finally {
       Maria.close(this.pstmt, this.con);
     } 
@@ -92,13 +92,13 @@ public class UserDAO {
         cnt = 9;
       } 
     } catch (ClassNotFoundException e) {
-      System.out.println("");
+      System.out.println("드라이버 로딩 실패");
       e.printStackTrace();
     } catch (SQLException e) {
-      System.out.println("SQL ");
+      System.out.println("SQL 구문이 처리되지 못했습니다");
       e.printStackTrace();
     } catch (Exception e) {
-      System.out.println("");
+      System.out.println("잘못된 연산 및 요청으로 목록을 불러오지 못했습니다");
     } finally {
       Maria.close(this.pstmt, this.con);
     } 
@@ -128,13 +128,13 @@ public class UserDAO {
 
       } 
     } catch (ClassNotFoundException e) {
-      System.out.println("");
+      System.out.println("드라이버 로딩 실패");
       e.printStackTrace();
     } catch (SQLException e) {
-      System.out.println("SQL" );
+      System.out.println("SQL 구문이 처리되지 못했습니다" );
       e.printStackTrace();
     } catch (Exception e) {
-      System.out.println("");
+      System.out.println("잘못된 연산 및 요청으로 인해 목록을 불러오지 못했습니다");
     } finally {
       Maria.close(this.rs, this.pstmt, this.con);
     } 
@@ -157,13 +157,13 @@ public class UserDAO {
 
       cnt = this.pstmt.executeUpdate();
     } catch (ClassNotFoundException e) {
-      System.out.println("");
+      System.out.println("드라이버 로딩 실패");
       e.printStackTrace();
     } catch (SQLException e) {
-      System.out.println("SQL" );
+      System.out.println("SQL 구문이 처리되지 못했습니다" );
       e.printStackTrace();
     } catch (Exception e) {
-      System.out.println("");
+      System.out.println("잘못된 연산 및 요청으로 인해 목록을 불러오지 못했습니다");
     } finally {
       Maria.close(this.pstmt, this.con);
     } 
@@ -194,13 +194,13 @@ public class UserDAO {
         userList.add(dto);
       } 
     } catch (ClassNotFoundException e) {
-      System.out.println("");
+      System.out.println("드라이버 로딩 실패");
       e.printStackTrace();
     } catch (SQLException e) {
-      System.out.println("SQL ");
+      System.out.println("SQL 구문이 처리되지 못했습니다");
       e.printStackTrace();
     } catch (Exception e) {
-      System.out.println("");
+      System.out.println("잘못된 연산 및 요청으로 인해 목록을 불러오지 못했습니다");
     } finally {
       Maria.close(this.rs, this.pstmt, this.con);
     } 
