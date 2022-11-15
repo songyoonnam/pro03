@@ -19,19 +19,20 @@ public class GetNoticeListCtrl extends HttpServlet {
        
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//UTF-8 
+
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
-		//dao
+
 		NoticeDAO dao = new NoticeDAO();
 		ArrayList<NoticeDTO> notiList = dao.getNoticeList();
 		
-		//daoview
+
 		request.setAttribute("list", notiList);
 		
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/noticeList.jsp");
 		view.forward(request, response);
 	}
 }
+

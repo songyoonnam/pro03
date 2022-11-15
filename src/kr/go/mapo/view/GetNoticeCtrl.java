@@ -22,7 +22,7 @@ public class GetNoticeCtrl extends HttpServlet {
 		NoticeDAO dao = new NoticeDAO();
 		NoticeDTO dto = dao.getNotice(no);
 		
-		//daoview
+
 		request.setAttribute("dto", dto);
 		
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/noticeDetail.jsp");
