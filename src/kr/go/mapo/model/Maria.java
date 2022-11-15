@@ -21,6 +21,9 @@ public class Maria {
 	final static String USER_LOGIN = "select * form user where id=? and pw=?";
 	final static String USER_ID_CHECK = "select * form user where id=?";
 	
+	final static String LOAD_LAST_NO = "";
+	final static String FILE_UPLOAD = "insert into pic(tourno, picname, ";
+	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DRIVER);
 		Connection con = DriverManager.getConnection(URL, USER, PW);

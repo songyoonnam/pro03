@@ -13,15 +13,14 @@
   
     <p> 
     <a class="navbar-item" href="<%=request.getContextPath() %>/">
-      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+      <img src="/WebContent/data/green.jpg" alt="마포 문화관광" width="112" height="28">
     </a>
        
       <a href="https://jgthms.com">개인정보처리방침 |</a>
       <a href="http://opensource.org/licenses/mit-license.php">CCTV처리방침 |</a>
       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">저작권정책 |</a>
-      <a href="https://jgthms.com">직원검색 |</a>
-      <a href="https://jgthms.com">찾아오시는길</a><br><br>
-      03937 서울특별시 마포구 월드컵로 212(성산동), TEL. 02-3153-8114(120 다산콜센터로 연결<br>
+      <a href="https://jgthms.com">홈페이지 개선의견</a><br><br>
+      03937 서울특별시 마포구 월드컵로 212(성산동), TEL. 02-3153-8114(120 다산콜센터로 연결)<br>
 	     야간 및 공휴일/당직실 TEL. 02-3153-8100/ FAX. 02-3153-8998~9
     </p>
   </div>

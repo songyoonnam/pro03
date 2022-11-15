@@ -10,7 +10,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>마포구청</title>
+    <title>마포 문화관광</title>
+    <jsp:include page="/head.jsp" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     
     
@@ -140,89 +141,6 @@
     <li><a>채용공고</a></li>
   </ul>
 </div>
-
-
-<h2><strong>마포 새소식</strong></h2>  
-            <div class="section">
-                <input type="radio" name="slide" id="slide01" checked>
-                <input type="radio" name="slide" id="slide02">
-                <input type="radio" name="slide" id="slide03">
-                <input type="radio" name="slide" id="slide04">
-                <input type="radio" name="slide" id="slide05">
-                <input type="radio" name="slide" id="slide06">
-                <div class="slidewrap">
-                    <ul class="slidelist">
-                        <li>
-                            <a>
-                                <img src="./img/index/notice/n0.jfif">
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <img src="./img/index/n1.jfif">
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <img src="./img/index/n2.jfif">
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <img src="./img/index/n3.jfif">
-                            </a>
-                        </li>
-                          <li>
-                            <a>
-                                <img src="./img/index/n4.jfif">
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <img src="./img/index/n5.jfif">
-                            </a>
-                        </li>
-                    </ul>
-            
-                    <div class="slide-control">
-                        <div class="control01">
-                            <label for="slide06" class="left"></label>
-                            <label for="slide02" class="right"></label>
-                        </div>
-                        <div class="control02">
-                            <label for="slide01" class="left"></label>
-                            <label for="slide03" class="right"></label>
-                        </div>
-                        <div class="control03">
-                            <label for="slide02" class="left"></label>
-                            <label for="slide04" class="right"></label>
-                        </div>
-                        <div class="control04">
-                            <label for="slide03" class="left"></label>
-                            <label for="slide05" class="right"></label>
-                        </div>
-                        <div class="control05">
-                            <label for="slide04" class="left"></label>
-                            <label for="slide06" class="right"></label>
-                        </div>
-                        <div class="control06">
-                            <label for="slide05" class="left"></label>
-                            <label for="slide01" class="right"></label>
-                        </div>
-                    </div>
-
-                    		<!-- 페이징 -->
-		            <ul class="slide-pagelist">
-			        <li><label for="slide01"></label></li>
-			        <li><label for="slide02"></label></li>
-			        <li><label for="slide03"></label></li>
-                    <li><label for="slide04"></label></li>
-                    <li><label for="slide05"></label></li>
-                    <li><label for="slide06"></label></li>
-		            </ul>
-
-                </div>
-            </div>
             
             
   	

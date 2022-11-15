@@ -102,12 +102,12 @@ public class NoticeDAO {
 	}
 
 	public int delNotice(int no) {
-		// TODO Auto-generated method stub
+
 		return 0;
 	}
 
 	public int modifyNotice(NoticeDTO dto) {
-		// TODO Auto-generated method stub
+
 		return 0;
 	}
 }
