@@ -82,7 +82,7 @@ public class UserDAO {
       this.rs = this.pstmt.executeQuery();
       if (this.rs.next()) {
         qpw = AES256.decryptAES256(this.rs.getString("pw"), this.key);
-        System.out.println(": " + qpw);
+        System.out.println("비밀번호 복호화: " + qpw);
         if (pw.equals(qpw)) {
           cnt = 1;
         } else {

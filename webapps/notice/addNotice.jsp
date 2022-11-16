@@ -13,6 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>공지사항 글 등록</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <style>
+    .buttons {padding-left: 450px;}
+    .title {text-align: center;}
+    </style>
+    
   </head>
   <body>
   <jsp:include page="../header.jsp" />
@@ -34,8 +40,8 @@
 			</table>
 			<div class="buttons">
 			  <button type="submit" class="button is-success">등록</button>
-			  <button type="reset" class="button is-warning">취소</button>
-			  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-info">목록</a>
+			  <button type="reset" class="button is-success">취소</button>
+			  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-success">목록</a>
 			</div>
 		</form>
     </div>

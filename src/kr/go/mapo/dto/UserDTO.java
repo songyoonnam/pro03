@@ -49,7 +49,7 @@ public class UserDTO {
     this.name = name;
   }
   
-  public int getPt() {
+  public int getPoint() {
     return this.point;
   }
   

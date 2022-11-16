@@ -114,7 +114,7 @@
 				var idChk = result.result;	
 				if(idChk==false){	
 					$("#idck").val("no");
-					$("#msg").html("<strong>기존에 사용되고 있는 아이디 입니다 다시 입력하시기 바랍니다</strong>");
+					$("#msg").html("<strong>기존에 사용되고 있는 아이디입니다 다시 입력하시기 바랍니다</strong>");
 					$("#id").focus();
 				} else if(idChk==true){	
 					$("#idck").val("yes");

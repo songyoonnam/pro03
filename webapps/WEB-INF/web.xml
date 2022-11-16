@@ -6,7 +6,13 @@
     <servlet-class>kr.go.mapo.controller.Main</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>t1</servlet-name>
-    <url-pattern>/</url-pattern>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+    <url-pattern>*.css</url-pattern>
+    <url-pattern>*.jpg</url-pattern>
+    <url-pattern>*.png</url-pattern>
+    <url-pattern>*.gif</url-pattern>
+    <url-pattern>*.webp</url-pattern>
+    <url-pattern>*.jfif</url-pattern>
   </servlet-mapping>
 </web-app>

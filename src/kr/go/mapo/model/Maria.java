@@ -23,6 +23,9 @@ public class Maria {
 	
 	final static String LOAD_LAST_NO = "select * from pic order by tourno";
 	final static String FILE_UPLOAD = "insert into pic(tourno, picname, pos)";
+	
+	public static final String TEST_SELECT_ONE = "select * from test where name=?";
+	public static final String TEST_SELECT_ALL = "select * from test";
 
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
