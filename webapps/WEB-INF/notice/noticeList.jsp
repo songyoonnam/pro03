@@ -22,9 +22,9 @@
 		<table class="table">
 		  <thead>
 		    <tr>
-		      <th><abbr title="No">No</abbr></th>
-		      <th><abbr title="Title">Title</abbr></th>
-		      <th><abbr title="Result">RegDate</abbr></th>
+		      <th><abbr title="No">번호</abbr></th>
+		      <th><abbr title="Title">제목</abbr></th>
+		      <th><abbr title="Result">작성일</abbr></th>
 		    </tr>
 		  </thead>
 		   <tbody>

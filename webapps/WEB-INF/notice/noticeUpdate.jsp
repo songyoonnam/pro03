@@ -39,9 +39,9 @@
 		  </tbody>
 		</table>
 		<div class="buttons">
-		  <button type="submit" class="button is-warning">글 수정</button>
-		  <button type="reset" class="button is-info">취소</button>
-		  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-info">목록</a>
+		  <button type="submit" class="button is-success">글 수정</button>
+		  <button type="reset" class="button is-success">취소</button>
+		  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-success">목록</a>
 		</div>
 	  </form>
     </div>

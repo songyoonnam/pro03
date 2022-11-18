@@ -43,7 +43,7 @@
 				    </c:forEach>
 					<c:if test="${empty list }">
 				    <tr>
-				    	<td colspan="4">해당 회원 목록이 없습니다.</td>
+				    	<td colspan="4">해당 회원 목록이 없습니다</td>
 				    </tr>
 				    </c:if>
 				  </tbody>

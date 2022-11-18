@@ -1,32 +1,37 @@
 package kr.go.mapo.view;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class MenuLoadCtrl
- */
-@WebServlet("/MenuLoadCtrl")
+import kr.go.mapo.dto.TourDTO;
+import kr.go.mapo.model.TourDAO;
+
+import org.json.JSONObject;
+
+@WebServlet({"/MenuLoadCtrl.do"})
 public class MenuLoadCtrl extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public MenuLoadCtrl() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-
+  private static final long serialVersionUID = 1L;
+  
+  protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    request.setCharacterEncoding("UTF-8");
+    response.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html; charset=UTF-8");
+    TourDAO dao = new TourDAO();
+    ArrayList<TourDTO> data = dao.JSONPlaceList();
+    PrintWriter out = response.getWriter();
+    HashMap<String, Object> map = new HashMap<>();
+    map.put("data", data);
+    JSONObject json = new JSONObject();
+    ((Map<String, Object>) json).putAll(map);
+    out.println(json.toString());
+  }
 }

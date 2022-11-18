@@ -11,6 +11,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>관리자 메인 페이지</title>
+    <style>
+    .section {text-align:center;}
+    </style>
     <jsp:include page="/head.jsp" />
 </head>
 <body>
@@ -19,7 +22,6 @@
 	    <div class="columns is-full">
 			<jsp:include page="${path1 }/admin/sidebar.jsp" />
 			<div class="column is-10">
-				<h2>${admin }테스트 입니다.</h2>
 				<h3>관리자 메인 페이지</h3>
 			</div>
 		</div>

@@ -23,7 +23,7 @@
 <jsp:include page="/header.jsp" />
   <section class="section">
     <div class="container">
-	<h2 class="title">회원 정보 확인 및 수정</h2>
+	<h2 class="title">회원 정보</h2>
 	<form name="frm1" id="frm1" action="${path1 }/UserUpdateCtrl.do" method="post" onsubmit="return joinCheck(this)">
 		<table class="table">
 			<tbody>
@@ -98,7 +98,7 @@
 				</tr>
 				<tr>
 					<th>방문 횟수</th>
-					<td>${dto.visted }</td>
+					<td>${dto.visited }</td>
 				</tr>
 				<tr>
 					<th>주소</th>
@@ -107,19 +107,19 @@
 						현재 주소 : ${dto.addr }
 					</h3>
 					<input type="hidden" name="addr" id="addr" value="${dto.addr }" />
-					<h3>변경할 주소 <span style="color:red">변경시에만 입력하시오.</span></h3>
+					<h3>변경할 주소 <span style="color:red">변경시에만 입력하세요</span></h3>
 					<c:set var="juso" value="${fn:split(dto.addr,'<br>')}" />
 					<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="input" value="${juso[0] }" required /><br>
 					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input" value="${juso[1] }" required /><br>
 					<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="input">
-					<button id="post_btn" onclick="findAddr()" class="button is-info">우편번호 검색</button>
+					<button id="post_btn" onclick="findAddr()" class="button is-success">우편번호 검색</button>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<input type="submit" name="submit-btn" class="button is-danger" value="회원정보변경">
-			<a href="${path1 }" class="button is-info">취소</a>
+			<input type="submit" name="submit-btn" class="button is-success" value="회원정보 변경">
+			<a href="${path1 }" class="button is-success">취소</a>
 		</div>
 	</form>	
 	<script>
