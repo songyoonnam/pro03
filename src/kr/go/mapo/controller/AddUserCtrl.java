@@ -34,8 +34,8 @@ public class AddUserCtrl extends HttpServlet {
     String id = request.getParameter("id");
     String pw = request.getParameter("pw");
     String name = request.getParameter("name");
-    String addr1 = request.getParameter("addr1");
-    String addr2 = request.getParameter("addr2");
+    String address1 = request.getParameter("address1");
+    String address2 = request.getParameter("address2");
     String email = request.getParameter("email");
     String tel = request.getParameter("tel");
     String birth = request.getParameter("birth");
@@ -65,7 +65,7 @@ public class AddUserCtrl extends HttpServlet {
     	user.setId(id);
     	user.setPw(encrypted);
     	user.setName(name);
-    	user.setAddr(String.valueOf(addr1)+"<br>"+addr2);
+    	user.setAddr(String.valueOf(address1)+"<br>"+address2);
     	user.setTel(tel);
     	user.setEmail(email);
     	user.setBirth(birth);
