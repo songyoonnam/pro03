@@ -46,6 +46,9 @@
 		  </tbody>
 		</table>
 		<a href="${path1 }/GetNoticeListCtrl.do">목록</a>
+		<c:if test='${sid eq "admin" }'>
+		
+		</c:if>
     </div>
   </section>
   <jsp:include page="/footer.jsp"></jsp:include>

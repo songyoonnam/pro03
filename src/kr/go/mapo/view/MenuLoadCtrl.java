@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.go.mapo.dto.TourDTO;
 import kr.go.mapo.model.TourDAO;
 
-import org.json.JSONObject;
+import net.sf.json.*;
 
 @WebServlet({"/MenuLoadCtrl.do"})
 public class MenuLoadCtrl extends HttpServlet {
@@ -31,7 +31,7 @@ public class MenuLoadCtrl extends HttpServlet {
     HashMap<String, Object> map = new HashMap<>();
     map.put("data", data);
     JSONObject json = new JSONObject();
-    ((Map<String, Object>) json).putAll(map);
+    json.putAll(map);
     out.println(json.toString());
   }
 }

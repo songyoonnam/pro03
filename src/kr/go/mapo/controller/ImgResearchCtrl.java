@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.go.mapo.dto.PicDTO;
 import kr.go.mapo.model.TourDAO;
 
-import org.json.JSONObject;
+import net.sf.json.*;
 
 @WebServlet({"/ImgResearchCtrl.do"})
 public class ImgResearchCtrl extends HttpServlet {
@@ -32,7 +32,7 @@ public class ImgResearchCtrl extends HttpServlet {
     HashMap<String, Object> map = new HashMap<>();
     map.put("picList", picList);
     JSONObject json = new JSONObject();
-    ((Map<String, Object>) json).putAll(map);
+    json.putAll(map);
     out.println(json);
   }
 }

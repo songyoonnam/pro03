@@ -6,7 +6,6 @@
 <%@ page import="java.text.*, java.net.InetAddress" %>
 <c:set var="path1" value="<%=request.getContextPath() %>" />
 <%
-	String no = request.getParameter("no");
 	String tourno = request.getParameter("tourno");
 %>
 <!DOCTYPE html>
@@ -22,7 +21,7 @@
 		<tr>
 			<th>위치</th>
 			<td>
-				<input type="number" name="pos" id="pos" class="input" value="<%=no %>" />
+				<input type="number" name="pos" id="pos" class="input" value="1" />
 			</td>
 		</tr>
 		<tr>
@@ -98,6 +97,7 @@
 			cache:false,
 			success:function(data){
 				var trans = $.parseJSON(data); 
+				//var trans = data;
 				$("#imgUpload").empty();
 								
 				//console.log(key[1]+", "+key[2]);

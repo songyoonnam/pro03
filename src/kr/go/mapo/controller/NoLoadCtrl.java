@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import kr.go.mapo.model.TourDAO;
-import org.json.JSONObject;
+import net.sf.json.*;
 
 @WebServlet({"/NoLoadCtrl.do"})
 public class NoLoadCtrl extends HttpServlet {
@@ -29,10 +29,10 @@ public class NoLoadCtrl extends HttpServlet {
     } else if (firstNo <= 999) {
       no = "0" + firstNo;
     } else {
-      i = firstNo;
+      no = ""+firstNo;
     } 
     JSONObject json = new JSONObject();
-    json.put("no", i);
+    json.put("no", no);
     PrintWriter out = response.getWriter();
     out.println(json.toString());
   }
