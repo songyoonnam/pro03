@@ -19,17 +19,14 @@
 	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
 	  <ul style="float:right;">
 	    <li><a href="${path1 }/">Home</a></li>
-	    <li><a href="${path1 }/GetTourListCtrl.do">전체 장소</a></li>
+	    <li><a href="${path1 }/GetShoppingListCtrl.do">전체 장소</a></li>
 	    <li class="is-active"><a href="#" aria-current="page">
  			<c:set var="cate" value="${placeCate }" /> 
 			<c:if test="${cate eq 'A' }">
-			<span>체험</span>
+			<span>쇼핑몰</span>
 			</c:if>
 			<c:if test="${cate eq 'B' }">
-			<span>공연</span>
-			</c:if>
-			<c:if test="${cate eq 'C' }">
-			<span>힐링</span>
+			<span>전통시장</span>
 			</c:if>
 	    </a></li>
 	  </ul>
@@ -47,13 +44,10 @@
 			          <p class="subtitle">
 			 			<c:set var="cate" value="${placeCate }" /> 
 						<c:if test="${cate eq 'A' }">
-						<span>체험</span>
+						<span>쇼핑몰</span>
 						</c:if>
 						<c:if test="${cate eq 'B' }">
-						<span>공연</span>
-						</c:if>
-						<c:if test="${cate eq 'C' }">
-						<span>힐링</span>
+						<span>전통시장</span>
 						</c:if>
 			          </p>
 			          <figure class="image is-4by3">
@@ -62,7 +56,7 @@
 			          <div class="content" style="margin:10px;">
 			          	<p class="item_com">${dto.comment2 }</p>
 			          </div>
-			          <a href="${path1 }/GetTourDetailCtrl.do?no=${dto.no }" class="button is-success">자세히 보기</a>
+			          <a href="${path1 }/GetShoppingDetailCtrl.do?no=${dto.no }" class="button is-success">자세히 보기</a>
 			        </article>
 			      </div>
 				</c:forEach>	
@@ -77,7 +71,7 @@
 			</div>
       	</div>
 		<div class="buttons">
-		  <a href="${path1 }/GetTourListCtrl.do" class="button is-success">전체 목록</a>
+		  <a href="${path1 }/GetShoppingListCtrl.do" class="button is-success">전체 목록</a>
 		</div>
     </div>
   </section>

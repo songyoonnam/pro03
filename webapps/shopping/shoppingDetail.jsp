@@ -20,17 +20,14 @@
 	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
 	  <ul style="float:right;">
 	    <li><a href="${path1 }/">Home</a></li>
-	    <li><a href="${path1 }/GetTourListCtrl.do">전체 장소</a></li>
-	    <li><a href="${path1 }/GetTourCateListCtrl.do?cate=${dto.cate }">
+	    <li><a href="${path1 }/GetShoppingListCtrl.do">전체 장소</a></li>
+	    <li><a href="${path1 }/GetShoppingCateListCtrl.do?cate=${dto.cate }">
  			<c:set var="cate" value="${dto.cate }" /> 
 			<c:if test="${cate eq 'A' }">
-			<span>체험</span>
+			<span>쇼핑몰</span>
 			</c:if>
 			<c:if test="${cate eq 'B' }">
-			<span>공연</span>
-			</c:if>
-			<c:if test="${cate eq 'C' }">
-			<span>힐링</span>
+			<span>전통시장</span>
 			</c:if>
 	    </a></li>
 	    <li class="is-active"><a href="#" aria-current="page">${dto.place }</a></li>
@@ -70,13 +67,10 @@
 		      <td>
    				<c:set var="cate" value="${dto.cate }" /> 
 				<c:if test="${cate eq 'A' }">
-				<span>체험</span>
+				<span>쇼핑몰</span>
 				</c:if>
 				<c:if test="${cate eq 'B' }">
-				<span>공연</span>
-				</c:if>
-				<c:if test="${cate eq 'C' }">
-				<span>힐링</span>
+				<span>전통시장</span>
 				</c:if>
 		      </td>
 		    </tr>
@@ -129,11 +123,11 @@
 	<br><br>
 		
 		<div class="buttons">
-		  <a href="${path1 }/GetTourListCtrl.do" class="button is-success">전체 목록</a>
-		  <a href="${path1 }/GetTourCateListCtrl.do?cate=${dto.cate }" class="button is-success">카테고리 목록</a>
+		  <a href="${path1 }/GetShoppingListCtrl.do" class="button is-success">전체 목록</a>
+		  <a href="${path1 }/GetShoppingCateListCtrl.do?cate=${dto.cate }" class="button is-success">카테고리 목록</a>
 		  <c:if test='${sid.equals("admin") }'>
-			  <a href="${path1 }/DelTourCtrl.do?no=${dto.no }" class="button is-success">장소 삭제</a>
-			  <a href="${path1 }/ModifyTourCtrl.do?no=${dto.no }" class="button is-success">장소 수정</a>
+			  <a href="${path1 }/DelShoppingCtrl.do?no=${dto.no }" class="button is-success">장소 삭제</a>
+			  <a href="${path1 }/ModifyShoppingCtrl.do?no=${dto.no }" class="button is-success">장소 수정</a>
 		  </c:if>
 		</div>
     </div>

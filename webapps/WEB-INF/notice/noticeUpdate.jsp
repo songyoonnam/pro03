@@ -18,7 +18,7 @@
   <jsp:include page="/header.jsp" />
   <section class="section">
     <div class="container">
-      <h1 class="title">공지사항 수정하기</h1>
+      <h1 class="title">공지사항 수정</h1>
       <form action="ModifyNoticeProCtrl.do" method="post">
 		<table class="table">
 		   <tbody>

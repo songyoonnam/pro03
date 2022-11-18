@@ -19,7 +19,7 @@
   <section class="section">
     <div class="container">
       <h2 class="title">이미지 추가하기</h2>
-		<form name="frm1" id="frm1" action="${path1 }/ModifyProTourCtrl.do" method="post" onsubmit="return tourCheck(this)">
+		<form name="frm1" id="frm1" action="${path1 }/ModifyProShoppingCtrl.do" method="post" onsubmit="return tourCheck(this)">
 	      	<div id="con">
 	      		<table class="table">
 	      			<c:if test="${not empty list }">
@@ -60,21 +60,17 @@
 			      	<input type="hidden" name="cate0" id="cate0" value="${dto.cate }" />
 	   				<c:set var="cate" value="${dto.cate }" /> 
 					<c:if test="${cate eq 'A' }">
-					<span>체험</span>
+					<span>쇼핑몰</span>
 					</c:if>
 					<c:if test="${cate eq 'B' }">
-					<span>공연</span>
-					</c:if>
-					<c:if test="${cate eq 'C' }">
-					<span>힐링</span>
+					<span>전통시장</span>
 					</c:if>
 					<div class="field">
 					  	<div class="select">
-						  <select name="cate" id="cate" class="select" onchange="changeTourNo()" required>
+						  <select name="cate" id="cate" class="select" onchange="changeShopNo()" required>
 						  	<option value="">선택</option>
-						    <option value="A">체험</option>
-						    <option value="B">공연</option>
-						    <option value="C">힐링</option>
+						    <option value="A">쇼핑몰</option>
+						    <option value="B">전통시장</option>
 						  </select>
 						</div>
 					</div>
@@ -82,9 +78,9 @@
 			    </tr>
 			    <tr>
 			      <th><label class="label">장소 번호</label></th>
-			      <td><p>${dto.tourno }</p>
-			      	<input type="hidden" name="tourno0" id="tourno0" value="${dto.tourno }" />
-			      	<input type="text" name="tourno" id="tourno" class="input" value="${dto.tourno }" readonly/>
+			      <td><p>${dto.shopno }</p>
+			      	<input type="hidden" name="shopno0" id="shopno0" value="${dto.shopno }" />
+			      	<input type="text" name="shopno" id="shopno" class="input" value="${dto.shopno }" readonly/>
 			      </td>
 			    </tr>
 			    <tr> 
@@ -104,9 +100,9 @@
 			  </tbody>
 			</table>
 			<div class="buttons">
-			  <a href="${path1 }/GetTourListCtrl.do" class="button is-success">목록</a>
+			  <a href="${path1 }/GetShoppingListCtrl.do" class="button is-success">목록</a>
 			  <c:if test='${sid.equals("admin") }'>
-				  <a href="${path1 }/GetTourDetailCtrl.do?no=${dto.no }" class="button is-success">장소 보기</a>
+				  <a href="${path1 }/GetShoppingDetailCtrl.do?no=${dto.no }" class="button is-success">장소 보기</a>
 				  <button type="submit" class="button is-success">장소 수정</button>
 			  </c:if>
 			</div>
@@ -115,12 +111,12 @@
   </section>
 	<script>
 	function imgUpload(pos){
-		var tourno = $("#tourno").val();
-		var win1 = window.open("${path1 }/tour/imgUpload.jsp?no="+pos+"&tourno="+tourno,"win","width=850, height=400");
+		var shopno = $("#shopno").val();
+		var win1 = window.open("${path1 }/shopping/imgUpload.jsp?no="+pos+"&shopno="+shopno,"win","width=850, height=400");
 	}
-	function changeTourNo(){
+	function changeShopNo(){
 		if($("#cate").val()=="" || $("#cate").val()==$("#cate0").val()){
-			$("#tourno").val($("#tourno0").val());
+			$("#shopno").val($("#shopno0").val());
 		} else {
 			listLoading();
 		}
@@ -133,7 +129,7 @@
 			dataType:"json",
 			success:function(data){
 				console.log(data.no);
-				$("#tourno").val($("#cate").val() + data.no);
+				$("#shopno").val($("#cate").val() + data.no);
 			}
 		});
 	}

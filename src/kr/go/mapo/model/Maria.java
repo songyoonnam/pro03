@@ -34,6 +34,11 @@ public class Maria {
 	final static String TOUR_LIST_ALL = "select * from tour";
 	final static String TOUR_CATE_LIST = "select a.no, a.tourno, a.cate, a.place, a.comment1, a.comment2, b.picname, b.pos from tour a inner join pic b on a.tourno=b.tourno where a.cate=? and b.pos=1";
 	
+	final static String ADD_SHOPPING = "insert into shopping(shopno, cate, place, comment1, comment2, addr) values (?,?,?,?,?,?)";
+	final static String SHOPPING_LIST_ALL = "select * from shopping";
+	final static String SHOPPING_CATE_LIST = "select a.no, a.shopno, a.cate, a.place, a.comment1, a.comment2, b.picname, b.pos from shopping a inner join pic b on a.shopno=b.shopno where a.cate=? and b.pos=1";
+	
+	
 	final static String TOUR_SEARCH_PLACE_LIST = "select * from tour where place like CONCAT('%',?,'%')"; //'%'+?+'%'
 	final static String TOUR_SEARCH_COMMENT_LIST = "select * from tour where comment2 like ?";
 	final static String TOUR_SEARCH_ALL_LIST = "select * from tour where place like ? or comment2 like ?";
@@ -57,6 +62,12 @@ public class Maria {
 	final static String FOOD_DELEDTE = "delete from food where no=?";
 	final static String FOOD_UPDATE = "update food set name=?, kind=?, menu=?, pos=?, tel=? where no=?";
     
+	final static String SHOPPING_SEARCH_PLACE_LIST = "select * from shopping where place like CONCAT('%',?,'%')"; //'%'+?+'%'
+	final static String SHOPPING_SEARCH_COMMENT_LIST = "select * from shopping where comment2 like ?";
+	final static String SHOPPING_SEARCH_ALL_LIST = "select * from shopping where place like ? or comment2 like ?";
+	final static String SHOPPING_LIST_DETAIL = "select * from shopping where no=?";
+	final static String SHOPPING_DEL = "delete from shopping where no=?";
+	final static String MODIFY_SHOPPING = "update shopping set shopno=?, cate=?, place=?, comment1=?, comment2=?, addr=? where no=?";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DRIVER);

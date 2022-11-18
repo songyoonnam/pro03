@@ -10,21 +10,25 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import kr.go.mapo.dto.PicDTO;
 import kr.go.mapo.dto.ShoppingDTO;
 import kr.go.mapo.model.ShoppingDAO;
 
-@WebServlet({"/GetShoppingListCtrl.do"})
-public class GetShoppingListCtrl extends HttpServlet {
+@WebServlet({"/ModifyShoppingCtrl.do"})
+public class ModifyShoppingCtrl extends HttpServlet {
   private static final long serialVersionUID = 1L;
   
   protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
     response.setContentType("text/html; charset=UTF-8");
+    int no = Integer.parseInt(request.getParameter("no"));
     ShoppingDAO dao = new ShoppingDAO();
-    ArrayList<ShoppingDTO> shoppingList = dao.getShoppingList();
-    request.setAttribute("list", shoppingList);
-    RequestDispatcher view = request.getRequestDispatcher("./shopping/shoppingList.jsp");
+    ShoppingDTO dto = dao.getShopping(no);
+    ArrayList<PicDTO> picList = dao.JSONPicList(dto.getShopno());
+    request.setAttribute("dto", dto);
+    request.setAttribute("list", picList);
+    RequestDispatcher view = request.getRequestDispatcher("./shopping/shoppingModify.jsp");
     view.forward((ServletRequest)request, (ServletResponse)response);
   }
 }

@@ -29,7 +29,7 @@
 						  	<option value="">선택</option>
 						    <option value="A">체험</option>
 						    <option value="B">공연</option>
-						    <option value="C">기타</option>
+						    <option value="C">힐링</option>
 						  </select>
 						  <input type="hidden" id="tourno" name="tourno" value="">
 						</div>
@@ -93,8 +93,8 @@
 				function changeTourNo(){
 					var cate = document.frm1.cate.value; 
 					if(cate==""){
-						alert("분류를 선택하지 않으셨습니다 기본값인 C 카테고리로 진행합니다");
-						cate = "C";
+						alert("분류를 선택하지 않으셨습니다 기본값인 A 카테고리로 진행합니다");
+						cate = "A";
 					}
 					//ajax로 현재 마지막 레코드의 번호를 불러옴
 					$.ajax({

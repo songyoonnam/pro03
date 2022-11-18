@@ -29,7 +29,7 @@
 		  <thead>
 		    <tr>
 		      <th><abbr title="Num">번호</abbr></th>
-
+			  <th><abbr title="Cate">분류</abbr></th>
 		      <th><abbr title="Place">장소</abbr></th>
 		    </tr>
 		  </thead>
@@ -40,17 +40,14 @@
 		      <td>
 				<c:set var="cate" value="${dto.cate }" /> 
 				<c:if test="${cate eq 'A' }">
-				<span>체험</span>
+				<span>쇼핑몰</span>
 				</c:if>
 				<c:if test="${cate eq 'B' }">
-				<span>공연</span>
-				</c:if>
-				<c:if test="${cate eq 'C' }">
-				<span>힐링</span>
+				<span>전통시장</span>
 				</c:if>
 		      </td>
 		      <td>
-		      	<a href="${path1 }/GetTourDetailCtrl.do?no=${dto.no }">${dto.place }</a>
+		      	<a href="${path1 }/GetShoppingDetailCtrl.do?no=${dto.no }">${dto.place }</a>
 			  </td>
 		    </tr>
 		    </c:forEach>
@@ -63,7 +60,7 @@
 		</table>
 		<c:if test='${sid.equals("admin") }'>
 		<div class="buttons">
-		  <a href="${path1 }/tour/addTour.jsp" class="button is-success">장소 등록</a>
+		  <a href="${path1 }/tour/addShopping.jsp" class="button is-success">장소 등록</a>
 		</div>
 		</c:if>
     </div>

@@ -35,6 +35,14 @@ public class PicDTO {
 		return "PicDTO [no=" + no + ", tourno=" + tourno + ", picname="
 				+ picname + ", pos=" + pos + "]";
 	}
+	public void setShopno(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	public String getShopno() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

@@ -71,6 +71,8 @@ CREATE TABLE food(no INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(30), kind VARC
 
 CREATE TABLE shopping(no INT PRIMARY KEY AUTO_INCREMENT, shopno VARCHAR(20), cate VARCHAR(20), place VARCHAR(100), comment1 VARCHAR(1000), comment2 VARCHAR(1000));
 
+SELECT * FROM shopping;
+
 SELECT * FROM notice;
 
 DELETE FROM notice WHERE content LIKE '%테스트%';
@@ -81,4 +83,6 @@ SELECT * FROM pic;
 SELECT * FROM tour;
 
 ALTER TABLE tour ADD COLUMN addr VARCHAR(200);
+
+
 
