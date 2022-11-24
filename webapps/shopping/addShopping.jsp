@@ -102,7 +102,7 @@
 						dataType:"json",
 						success:function(data){
 							console.log(data.no);
-							$("#tourno").val(cate + data.no);
+							$("#shopno").val(cate + data.no);
 						}
 					});
 				}

@@ -60,7 +60,7 @@
 		</table>
 		<c:if test='${sid.equals("admin") }'>
 		<div class="buttons">
-		  <a href="${path1 }/tour/addShopping.jsp" class="button is-success">장소 등록</a>
+		  <a href="${path1 }/shopping/addShopping.jsp" class="button is-success">장소 등록</a>
 		</div>
 		</c:if>
     </div>

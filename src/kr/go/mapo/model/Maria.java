@@ -69,6 +69,12 @@ public class Maria {
 	final static String SHOPPING_DEL = "delete from shopping where no=?";
 	final static String MODIFY_SHOPPING = "update shopping set shopno=?, cate=?, place=?, comment1=?, comment2=?, addr=? where no=?";
 	
+	final static String HISTORY_SELECT_ALL = "select * from history";
+	final static String HISTORY_SELECT_ONE = "select * from history where no=?";
+	final static String HISTORY_INSERT = "insert into history(title, content) values (?, ?)";
+	final static String HISTORY_DELEDTE = "delete from history where no=?";
+	final static String HISTORY_UPDATE = "update history set title=?, content=? where no=?";
+	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DRIVER);
 		Connection con = DriverManager.getConnection(URL, USER, PW);

@@ -7,7 +7,7 @@
 <c:set var="path1" value="<%=request.getContextPath() %>" />
 <%
 	String no = request.getParameter("no");
-	String tourno = request.getParameter("tourno");
+	String shopno = request.getParameter("shopno");
 %>
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,7 @@
 		<tr>
 			<th>장소 번호</th>
 			<td>
-				<input type="text" name="tourno" id="tourno" class="input" value="<%=tourno %>" readonly />
+				<input type="text" name="shopno" id="shopno" class="input" value="<%=shopno %>" readonly />
 			</td>
 		</tr>
 		<tr>
@@ -106,7 +106,7 @@
 					if(key=="picList"){
 						for(var i=0;i<value.length;i++){
 							console.log(value[i].picname);
-							tg = tg + "<div style='float:left;'><img src='${path1 }/upload/"+value[i].picname+"' alt='"+value[i].tourno+"' style='max-width:300px'/></div>";
+							tg = tg + "<div style='float:left;'><img src='${path1 }/upload/"+value[i].picname+"' alt='"+value[i].shopno+"' style='max-width:300px'/></div>";
 						}
 					}
 				});
@@ -116,7 +116,7 @@
 	}
 	function fileResearch(){
 		var params = {
-				tourno : $("#tourno").val()
+				shopno : $("#shopno").val()
 		};
 		$.ajax({
 			url:"${path1 }/ImgResearchCtrl.do",
@@ -134,7 +134,7 @@
 					if(key=="picList"){
 						for(var i=0;i<value.length;i++){
 							console.log(value[i].picname);
-							tg = tg + "<div style='float:left'><img src='${path1 }/upload/"+value[i].picname+"' alt='"+value[i].tourno+"' style='max-width:300px' /></div>";
+							tg = tg + "<div style='float:left'><img src='${path1 }/upload/"+value[i].picname+"' alt='"+value[i].shopno+"' style='max-width:300px' /></div>";
 						}
 					}
 				});
