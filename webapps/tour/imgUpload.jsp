@@ -6,6 +6,7 @@
 <%@ page import="java.text.*, java.net.InetAddress" %>
 <c:set var="path1" value="<%=request.getContextPath() %>" />
 <%
+	String no = request.getParameter("no");
 	String tourno = request.getParameter("tourno");
 %>
 <!DOCTYPE html>
@@ -13,7 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <title>이미지 업로드</title>
-<jsp:include page="/head.jsp" />
+<jsp:include page="../head.jsp" />
 </head>
 <body>
 <form name="upload" id="upload" action="${path1 }/ImgUploadCtrl.do" method="post" enctype="multipart/form-data">
@@ -21,7 +22,7 @@
 		<tr>
 			<th>위치</th>
 			<td>
-				<input type="number" name="pos" id="pos" class="input" value="1" />
+				<input type="number" name="pos" id="pos" class="input" value="<%=no %>" />
 			</td>
 		</tr>
 		<tr>
@@ -44,16 +45,16 @@
 			<td colspan="2">
 				<div class="field is-grouped">
 				  <div class="control">
-				    <button type="button" class="button is-link is-success" onclick="fileUpload()">파일 업로드</button>
+				    <button type="button" class="button is-link" onclick="fileUpload()">파일 업로드</button>
 				  </div>
 				  <div class="control">
-				    <button type="reset" class="button is-link is-success">취소</button>
+				    <button type="reset" class="button is-link is-light">취소</button>
 				  </div>
 				  <div class="control">
-				    <button type="button" class="button is-link is-success" onclick="picCheck()">확인</button>
+				    <button type="button" class="button is-link is-light" onclick="picCheck()">확인</button>
 				  </div>
 				  <div class="control">
-				    <button type="button" class="button is-link is-success" onclick="window.close()">닫기</button>
+				    <button type="button" class="button is-link is-light" onclick="window.close()">닫기</button>
 				  </div>
 				</div>
 			</td>
@@ -70,7 +71,7 @@
 	<script>
 	function fileUpload(){
 		if($("#picname").val()==""){
-			alert("업로드할 파일을 지정하지 않으셨습니다");
+			alert("업로드할 파일을 지정하지 않으셨습니다.");
 			return;
 		}
 		//파일 용량 제한
@@ -78,7 +79,7 @@
 		if ($('#picname').val() != "") { 
 			var size = document.getElementById("picname").files[0].size;
 			if(size > maxSize){
-				alert("첨부파일 사이즈는 10MB 이내로 등록 가능합니다");
+				alert("첨부파일 사이즈는 10MB 이내로 등록 가능합니다.");
 				$('#picname').val("");
 				$('#picname').focus();
 				return false;
@@ -97,7 +98,6 @@
 			cache:false,
 			success:function(data){
 				var trans = $.parseJSON(data); 
-				//var trans = data;
 				$("#imgUpload").empty();
 								
 				//console.log(key[1]+", "+key[2]);

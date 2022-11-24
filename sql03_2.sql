@@ -85,4 +85,5 @@ SELECT * FROM tour;
 ALTER TABLE tour ADD COLUMN addr VARCHAR(200);
 
 
+SELECT * FROM food;
 

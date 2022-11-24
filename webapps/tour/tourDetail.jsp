@@ -19,7 +19,7 @@
   <jsp:include page="/header.jsp" />
 	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
 	  <ul style="float:right;">
-	    <li><a href="${path1 }/">Home</a></li>
+	    <li><a href="${path1 }/">HOME</a></li>
 	    <li><a href="${path1 }/GetTourListCtrl.do">전체 장소</a></li>
 	    <li><a href="${path1 }/GetTourCateListCtrl.do?cate=${dto.cate }">
  			<c:set var="cate" value="${dto.cate }" /> 
@@ -53,7 +53,7 @@
 		    	</c:if>
 				<c:if test="${empty list }">
 			    <tr>
-			    	<td>해당 이미지가 없습니다.</td>
+			    	<td>해당 이미지가 없습니다</td>
 			    </tr>
 			    </c:if>
 		  </tbody>
@@ -129,12 +129,14 @@
 	<br><br>
 		
 		<div class="buttons">
+			<c:if test='${sid.equals("admin") }'>
+		  	  <a href="${path1 }/ModifyTourCtrl.do?no=${dto.no }" class="button is-success">수정</a>
+			  <a href="${path1 }/DelTourCtrl.do?no=${dto.no }" class="button is-success">삭제</a>
+
+		  </c:if>
 		  <a href="${path1 }/GetTourListCtrl.do" class="button is-success">전체 목록</a>
 		  <a href="${path1 }/GetTourCateListCtrl.do?cate=${dto.cate }" class="button is-success">카테고리 목록</a>
-		  <c:if test='${sid.equals("admin") }'>
-			  <a href="${path1 }/DelTourCtrl.do?no=${dto.no }" class="button is-success">장소 삭제</a>
-			  <a href="${path1 }/ModifyTourCtrl.do?no=${dto.no }" class="button is-success">장소 수정</a>
-		  </c:if>
+
 		</div>
     </div>
   </section>

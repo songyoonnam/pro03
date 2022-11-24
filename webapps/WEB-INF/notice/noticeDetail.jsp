@@ -45,10 +45,11 @@
 		    </tr>
 		  </tbody>
 		</table>
-		<a href="${path1 }/GetNoticeListCtrl.do">목록</a>
-		<c:if test='${sid eq "admin" }'>
-		
-		</c:if>
+		<c:if test='${sid.equals("admin") }'>
+			<a href="${path1 }/ModifyNoticeCtrl.do?no=${dto.no }" class="button is-success">수정</a>
+			<a href="${path1 }/DelNoticeCtrl.do?no=${dto.no }" class="button is-success">삭제</a>
+		 </c:if>
+		  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-success">목록</a>
     </div>
   </section>
   <jsp:include page="/footer.jsp"></jsp:include>

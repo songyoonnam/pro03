@@ -25,12 +25,25 @@
   <section class="section">
     <div class="container">
       <h1 class="title">장소 목록</h1>
+		<form name="frm1" id="frm1" class="search_form" action="${path1 }/GetPlaceSearchCtrl.do" method="get">
+			<div class="select inline">
+				<select name="sel" id="sel" required>
+					<option value="">선택</option>
+					<option value="place">장소명</option>
+					<option value="comment2">장소설명</option>
+					<option value="place+comment2">장소명+장소설명</option>
+				</select>
+			</div><br><br>
+			<input type="text" name="keyword" id="keyword" class="input inline" placeholder="검색어 입력" required><br><br>
+			<input type="submit" class="button is-success inline" value="검색">
+		</form><br>
 		<table class="table">
 		  <thead>
 		    <tr>
 		      <th><abbr title="Num">번호</abbr></th>
-
+		      <th><abbr title="Cate">분류</abbr></th>
 		      <th><abbr title="Place">장소</abbr></th>
+		      <th><abbr title="Comment">설명</abbr></th>
 		    </tr>
 		  </thead>
 		   <tbody>
@@ -52,11 +65,14 @@
 		      <td>
 		      	<a href="${path1 }/GetTourDetailCtrl.do?no=${dto.no }">${dto.place }</a>
 			  </td>
+			  <td>
+			  	<p class="comment2">${dto.comment2 }</p>
+			  </td>
 		    </tr>
 		    </c:forEach>
 			<c:if test="${empty list }">
 		    <tr>
-		    	<td colspan="3">해당 데이터 목록이 없습니다</td>
+		    	<td colspan="4">해당 데이터 목록이 없습니다</td>
 		    </tr>
 		    </c:if>
 		  </tbody>

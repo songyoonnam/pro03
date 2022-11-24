@@ -6,7 +6,7 @@
 	<div class="container"> 
 		<nav class="navbar" role="navigation" aria-label="main navigation" id="nav">
 		  <div class="navbar-brand">
-		    <a class="navbar-item" id="logo" href="<%=request.getContextPath() %>/">
+		    <a class="navbar-item" id="logo2" href="<%=request.getContextPath() %>/">
 		    </a>
 		
 		    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

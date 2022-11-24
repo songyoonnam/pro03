@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class Maria {
     static final String DRIVER = "org.mariadb.jdbc.Driver";
-    static final String URL = "jdbc:mariadb://127.0.0.1:3306/government?serverTimezone=Asia/Seoul";
+    static final String URL = "jdbc:mariadb://127.0.0.1:3308/government?serverTimezone=Asia/Seoul";
     static final String USER = "root";
     static final String PW = "1234";
     

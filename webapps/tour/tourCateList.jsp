@@ -16,9 +16,9 @@
   </head>
   <body>
   <jsp:include page="/header.jsp" />
-	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
+	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #fff; padding-bottom:8px; min-height:48px; line-height:48px;">
 	  <ul style="float:right;">
-	    <li><a href="${path1 }/">Home</a></li>
+	    <li><a href="${path1 }/">HOME</a></li>
 	    <li><a href="${path1 }/GetTourListCtrl.do">전체 장소</a></li>
 	    <li class="is-active"><a href="#" aria-current="page">
  			<c:set var="cate" value="${placeCate }" /> 
